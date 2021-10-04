@@ -14,7 +14,7 @@ import { getPieChart } from '../../redux/pieChartSlice';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 import { GetUserInfo, SubscribeToChannel } from '@zuri/control';
-import { getAverageProgress } from '../../redux/averageGoal.slice';
+// import { getAverageProgress } from '../../redux/averageGoal.slice';
 
 const ReportsAndNotificationContainer = () => {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -32,9 +32,9 @@ const ReportsAndNotificationContainer = () => {
     dispatch(getPieChart());
   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(getAverageProgress(orgId));
-  })
+  // useEffect(() => {
+  //   dispatch(getAverageProgress(orgId));
+  // })
 
   const notifications = useSelector(selectNotifications);
 
